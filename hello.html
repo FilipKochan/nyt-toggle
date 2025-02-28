@@ -1,0 +1,31 @@
+<html>
+  <body style="width: 300px">
+    <div id="main-content">
+      <h1>NYT Sudoku Toggle</h1>
+      <p>
+        This extension enables you to toggle between normal and candidate mode
+        in NYT Sudoku game with key press.
+      </p>
+
+      <p>
+        It is necessarry to reload the Sudoku page after modifying the toggle
+        keys.
+      </p>
+
+      <label for="toggleKeys">Currently registered toggle keys:</label>
+
+      <ul
+        id="keys"
+        style="display: flex; gap: 5px; flex-direction: column"
+      ></ul>
+      <div id="no-keys"><p>(no keys are registered)</p></div>
+
+      <button id="save">Register new key</button>
+
+      <script src="options-manage.js"></script>
+    </div>
+    <div id="registering" style="display: none">
+      <h1>Now press the key to register it...</h1>
+    </div>
+  </body>
+</html>
