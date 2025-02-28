@@ -41,7 +41,6 @@ function createKeysList() {
   chrome.storage.sync.get({ toggleKeys: ["t", "0"] }, (data) => {
     const list = document.getElementById("keys");
     list.innerHTML = "";
-    console.log(data.toggleKeys);
     for (const key of data.toggleKeys) {
       const row = document.createElement("li");
       const span = document.createElement("span");
@@ -61,7 +60,7 @@ function createKeysList() {
       list.style.display = "none";
     } else {
       empty.style.display = "none";
-      list.style.display = "flex";
+      list.style.display = "block";
     }
   });
 }
